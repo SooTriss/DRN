@@ -3,32 +3,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Menu } from "lucide-react";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
+import Navbar from "@/components/ui/navbar";
 
 export default function LandingPage() {
   return (
     <div className="w-full min-h-screen bg-white text-gray-900">
-      <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center py-6 px-4">
-          <div className="flex items-center gap-2">
-            <img src="/icon4.png" alt="B.D.M Logo" className="w-15 h-15 bg-brand/10 p-1 rounded-full hover:scale-110 transition-transform" />
-            <h1 className="text-xl font-bold ">B.D.M</h1>
-          </div>
-          <nav className="hidden md:flex space-x-6">
-          <a href="#drones" className="hover:text-green-600">Drone</a>
-          <a href="#builder" className="hover:text-green-600">Drone Builder</a>
-          <a href="#parts" className="hover:text-green-600">Drone Parts</a>
-          <a href="#contact" className="hover:text-green-600">Contact</a>
-          </nav>
-          <div className="space-x-2">
-            <Button>Sign In</Button>
-            <Button>Register</Button>
-          </div>
-        </div>
-        <Menu className="md:hidden" />
-      </header>
-
-      {/* Hero */}
+      <div className="sticky top-0 z-50"><Navbar/></div>
       <section className="relative w-full h-[80vh] flex flex-col justify-center items-center text-white overflow-hidden">
         <div aria-hidden="true">
           <video
@@ -37,7 +18,7 @@ export default function LandingPage() {
           muted
           playsInline
           disablePictureInPicture
-          noskipping
+          noskipping="true"
           controlsList="nodownload nofullscreen noremoteplayback noplaybackrate noskip noseek"
           className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none select-none"
           preload="auto"
@@ -54,8 +35,10 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <h1 className="text-5xl font-bold">B.D.M</h1>
-          <p className="text-lg mt-3">Baltic Drone Manufacturing</p>
+          <div className="h-46 w-46 object-fill object-top">
+            <img src="/icon2.png"></img>
+          </div>
+          <p className="text-center font-serif">Baltic Drone Manufacturing</p>
         </motion.div>
       </section>
 

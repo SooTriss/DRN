@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Menu } from "lucide-react";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 
 export default function LandingPage() {
@@ -18,7 +20,7 @@ export default function LandingPage() {
           <a href="#drones" className="hover:text-green-600">Drone</a>
           <a href="#builder" className="hover:text-green-600">Drone Builder</a>
           <a href="#parts" className="hover:text-green-600">Drone Parts</a>
-          <a href="#contact" className="hover:text-green-600">Contact</a>
+          <Link to="/contact" className="hover:text-green-600">Contact</Link>
           </nav>
           <div className="space-x-2">
             <Button>Sign In</Button>

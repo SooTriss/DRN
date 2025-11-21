@@ -1,7 +1,13 @@
+import { useEffect } from "react";
+
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="p-8 bg-gray-50 min-h-screen flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Kontakt</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Contact us</h1>
 
       <form className="flex flex-col gap-4 w-full max-w-md bg-white p-6 rounded-xl shadow-md">
         <input
